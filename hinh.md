@@ -1,5 +1,4 @@
-
- ```mermaid
+```mermaid
 graph TB
 
     %% =========================
@@ -11,21 +10,19 @@ graph TB
     Admin["Admin"]
 
     %% =========================
-    %% SYSTEM
+    %% CENTER SYSTEM
     %% =========================
 
-    subgraph "AutoWash Pro System"
-        System["Smart Automated Car Wash<br/>Management System"]
-    end
+    System["Smart Automated Car Wash<br/>Management System"]
 
     %% =========================
-    %% BOTTOM EXTERNAL SERVICE
+    %% BOTTOM SERVICE
     %% =========================
 
     Bank["Banking App"]
 
     %% =========================
-    %% LAYOUT CONTROL
+    %% FORCE POSITION
     %% =========================
 
     Customer --- Staff
@@ -35,42 +32,51 @@ graph TB
     %% CUSTOMER INTERACTIONS
     %% =========================
 
-    Customer -->|Register, Login, Book, View Queue| System
-    Customer -->|Pay for Services| System
-    Customer -->|Earn Loyalty Points| System
+    Customer --> System
+    Customer --> System
+    Customer --> System
 
     %% =========================
     %% STAFF INTERACTIONS
     %% =========================
 
-    Staff -->|Check-in Customers| System
-    Staff -->|Update Wash Status| System
-    Staff -->|Confirm Payments| System
-    Staff -->|View Dashboard| System
+    Staff --> System
+    Staff --> System
+    Staff --> System
+    Staff --> System
 
     %% =========================
     %% ADMIN INTERACTIONS
     %% =========================
 
-    Admin -->|Configure System| System
-    Admin -->|Manage Promotions| System
-    Admin -->|View Analytics| System
+    Admin --> System
+    Admin --> System
+    Admin --> System
 
     %% =========================
     %% BANKING INTERACTIONS
     %% =========================
 
-    System -->|Process QR Payments| Bank
-    Bank -->|Payment Confirmation| System
+    System --> Bank
+    Bank --> System
+
+    %% =========================
+    %% LINK LABELS
+    %% =========================
+
+    linkStyle 0,1,2 stroke:#000,stroke-width:2px
+    linkStyle 3,4,5,6 stroke:#000,stroke-width:2px
+    linkStyle 7,8,9 stroke:#000,stroke-width:2px
+    linkStyle 10,11 stroke:#000,stroke-width:2px
 
     %% =========================
     %% STYLES
     %% =========================
 
-    style System fill:#4A90E2,stroke:#2E5C8A,stroke-width:4px,color:#fff
+    style System fill:#4A90E2,stroke:#000,stroke-width:4px,color:#fff
 
-    style Customer fill:#50E3C2,stroke:#2E8C74,stroke-width:2px
-    style Staff fill:#F5A623,stroke:#C87A1A,stroke-width:2px
-    style Admin fill:#9013FE,stroke:#6A0DAD,stroke-width:2px
-    style Bank fill:#E74C3C,stroke:#C0392B,stroke-width:2px
+    style Customer fill:#50E3C2,stroke:#000,stroke-width:3px
+    style Staff fill:#F5A623,stroke:#000,stroke-width:3px
+    style Admin fill:#9013FE,stroke:#000,stroke-width:3px
+    style Bank fill:#E74C3C,stroke:#000,stroke-width:3px
 ```
