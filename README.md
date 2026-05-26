@@ -10,14 +10,14 @@ This repository contains the complete specification and design documentation for
    - 42 comprehensive user stories organized by functional category
    - Acceptance criteria for each story
    - Priority levels and phase breakdown
-   - **Categories**: Account Management, Vehicle Management, Booking, Queue, Payment, Loyalty, Promotions, Operations, Analytics, Notifications, Configuration, Feedback
+   - **Categories**: Account Management, Vehicle Management, Booking, Queue, Payment, Loyalty, Promotions, Operations, Analytics, Configuration, Feedback
 
 #### 2. **CONTEXT_DIAGRAM.md** - System Context
    - High-level system architecture
    - External actors and their roles
    - System boundaries and scope
    - Data flow overview
-   - **Actors**: Customer, Staff, Admin, Banking App, Notification Service
+   - **Actors**: Customer, Staff, Admin, Banking App
 
 #### 3. **MAIN_FLOWS.md** - Process Flows & Sequence Diagrams
    - **Booking Flow**: Customer registration → booking → payment → confirmation
@@ -33,14 +33,12 @@ This repository contains the complete specification and design documentation for
 
 **AutoWash Pro** is a comprehensive digital solution for managing modern car wash operations with features including:
 
-✅ **Online Booking System** - Customers can book services in advance with available slot visibility  
-✅ **Real-time Queue Management** - Track queue position and estimated wait times  
+✅ **Online Booking System** - Customers can book services in advance with available slot visibility   
 ✅ **Loyalty Program** - Automatic tier-based rewards (Standard → Member → VIP)  
 ✅ **Smart Payment System** - QR Banking + Internal Wallet integration  
 ✅ **Peak Hour Management** - Intelligent slot allocation by membership tier  
 ✅ **Operations Dashboard** - Real-time staff dashboard for queue and service management  
 ✅ **Business Analytics** - Revenue, customer, and refund analytics for decision-making  
-✅ **Notification System** - Email/SMS/Push notifications for bookings, queue updates, and tier upgrades  
 ✅ **Rating & Feedback** - Service quality tracking and improvement insights  
 
 ---
