@@ -1,4 +1,4 @@
-
+```mermaid
 graph LB
     subgraph "External Actors"
         Customer["Customer"]
