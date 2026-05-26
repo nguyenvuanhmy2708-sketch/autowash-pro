@@ -53,14 +53,12 @@ graph TB
 - Books car wash services
 - Selects service packages and time slots
 - Makes payments via QR Banking or internal wallet
-- Tracks queue status in real-time
 - Views booking history and invoices
 - Accumulates and redeems loyalty points
 - Rates services and provides feedback
 
 ### 2. **Staff**
 - Checks in walk-in customers
-- Manages the real-time queue
 - Updates car wash status
 - Confirms QR Banking payments
 - Manages service changes on-site
@@ -88,8 +86,7 @@ graph TB
 ### **In Scope:**
  Customer registration and authentication  
  Vehicle management  
- Advance booking with slot management  
- Real-time queue management  
+ Advance booking with slot management    
  Payment processing (QR Banking & Internal Wallet)  
  Loyalty program and membership tiers  
  Promotion management  
