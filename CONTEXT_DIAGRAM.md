@@ -96,24 +96,24 @@ graph TB
 ## System Boundaries
 
 ### **In Scope:**
-âœ… Customer registration and authentication  
-âœ… Vehicle management  
-âœ… Advance booking with slot management  
-âœ… Real-time queue management  
-âœ… Payment processing (QR Banking & Internal Wallet)  
-âœ… Loyalty program and membership tiers  
-âœ… Promotion management  
-âœ… Operations dashboard for staff  
-âœ… Business analytics and reporting  
-âœ… Notification system  
-âœ… Service quality rating system  
+ Customer registration and authentication  
+ Vehicle management  
+ Advance booking with slot management  
+ Real-time queue management  
+ Payment processing (QR Banking & Internal Wallet)  
+ Loyalty program and membership tiers  
+ Promotion management  
+ Operations dashboard for staff  
+ Business analytics and reporting  
+ Notification system  
+ Service quality rating system  
 
 ### **Out of Scope:**
-âŒ Physical car wash equipment control  
-âŒ Multi-location support (single location only)  
-âŒ Direct banking integration (only QR code)  
-âŒ Inventory management for supplies  
-âŒ Employee payroll or HR management  
+ Physical car wash equipment control  
+ Multi-location support (single location only)  
+ Direct banking integration (only QR code)  
+ Inventory management for supplies  
+ Employee payroll or HR management  
 
 ---
 
