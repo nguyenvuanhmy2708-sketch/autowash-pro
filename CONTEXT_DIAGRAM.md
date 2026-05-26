@@ -9,7 +9,6 @@ graph TB
         Staff[" Staff"]
         Admin["Admin"]
         Bank["Banking App"]
-        Notify[" Notification Service"]
     end
     
     subgraph "AutoWash Pro System"
@@ -36,15 +35,12 @@ graph TB
     System -->|Process QR Payments| Bank
     Bank -->|Payment Confirmation| System
     
-    System -->|Send Notifications| Notify
-    Notify -->|SMS/Email/Push| Customer
     
     style System fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
     style Customer fill:#50E3C2,stroke:#2E8C74,stroke-width:2px
     style Staff fill:#F5A623,stroke:#C87A1A,stroke-width:2px
     style Admin fill:#9013FE,stroke:#6A0DAD,stroke-width:2px
     style Bank fill:#E74C3C,stroke:#C0392B,stroke-width:2px
-    style Notify fill:#27AE60,stroke:#1E8449,stroke-width:2px
 ```
 
 ---
@@ -84,12 +80,6 @@ graph TB
 - Sends payment confirmation/failure status
 - Handles refunds and chargebacks
 
-### 5. **Notification Service**
-- Sends booking confirmations
-- Sends queue status updates
-- Sends service completion notifications
-- Sends loyalty tier upgrade notifications
-- Sends promotional alerts
 
 ---
 
@@ -105,7 +95,6 @@ graph TB
  Promotion management  
  Operations dashboard for staff  
  Business analytics and reporting  
- Notification system  
  Service quality rating system  
 
 ### **Out of Scope:**
