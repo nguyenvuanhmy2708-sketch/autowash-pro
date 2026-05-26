@@ -5,15 +5,15 @@
 ```mermaid
 graph TB
     subgraph "External Actors"
-        Customer["ðŸ‘¤ Customer"]
-        Staff["ðŸ‘· Staff"]
-        Admin["âš™ï¸ Admin"]
-        Bank["ðŸ¦ Banking App"]
-        Notify["ðŸ“¢ Notification Service"]
+        Customer["Customer"]
+        Staff[" Staff"]
+        Admin["Admin"]
+        Bank["Banking App"]
+        Notify[" Notification Service"]
     end
     
     subgraph "AutoWash Pro System"
-        System["ðŸš— Smart Automated Car Wash<br/>Management System"]
+        System["Smart Automated Car Wash<br/>Management System"]
     end
     
     %% Customer interactions
@@ -120,9 +120,9 @@ graph TB
 ## Data Flow Summary
 
 ### Information Flows:
-1. **Booking Flow** â†’ Customer â†’ System â†’ Staff â†’ Notification Service
-2. **Payment Flow** â†’ Customer â†’ System â†’ Banking App â†’ System â†’ Confirmation
-3. **Loyalty Flow** â†’ System â†’ Customer (Points) + Admin (Tier Management)
-4. **Analytics Flow** â†’ System â†’ Admin (Reports & Dashboard)
-5. **Queue Flow** â†’ Staff â†’ System â†’ Customer (Real-time Updates)
+1. **Booking Flow** -> Customer -> System -> Staff -> Notification Service
+2. **Payment Flow** -> Customer -> System -> Banking App -> System -> Confirmation
+3. **Loyalty Flow** -> System -> Customer (Points) + Admin (Tier Management)
+4. **Analytics Flow** -> System -> Admin (Reports & Dashboard)
+5. **Queue Flow** -> Staff -> System -> Customer (Real-time Updates)
 
