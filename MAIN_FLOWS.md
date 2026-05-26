@@ -12,7 +12,7 @@ sequenceDiagram
     
     Customer->>WebApp: 1. Login to system
     WebApp->>Backend: Verify credentials
-    Backend-->>WebApp: âœ“ Login successful
+    Backend-->>WebApp:  Login successful
     
     Customer->>WebApp: 2. Select vehicle & service package
     WebApp->>Backend: Check availability
@@ -44,7 +44,7 @@ sequenceDiagram
     Backend->>Notification: Send confirmation
     Notification-->>Customer: SMS/Email: Booking confirmed
     
-    Backend-->>WebApp: âœ“ Booking successful
+    Backend-->>WebApp:  Booking successful
     WebApp-->>Customer: Display booking details & invoice
     
     Note over Customer,Notification: Booking Status: CONFIRMED
@@ -92,7 +92,7 @@ sequenceDiagram
         
         Staff->>Staff: Wash vehicle
         
-        Staff->>System: Update status â†’ "Completed"
+        Staff->>System: Update status -> "Completed"
         System->>Notification: Send notification
         Notification-->>Customer: "Your car wash is complete"
         
@@ -138,16 +138,16 @@ sequenceDiagram
     end
     
     alt Tier Threshold Reached
-        System->>System: Check if points â‰¥ tier threshold
+        System->>System: Check if points tier threshold
         
         System->>System: Upgrade membership tier
-        Note over System: Standard â†’ Member (500 pts)<br/>Member â†’ VIP (2000 pts)
+        Note over System: Standard -> Member (500 pts)<br/>Member -> VIP (2000 pts)
         
         System->>System: Apply new multiplier
         System->>System: Grant tier benefits
         
         System->>Notification: Create tier upgrade notification
-        Notification-->>Customer: "ðŸŽ‰ You've reached Member tier!<br/>Enjoy 1.5x loyalty points!"
+        Notification-->>Customer: " You've reached Member tier!<br/>Enjoy 1.5x loyalty points!"
     end
     
     Customer->>System: 5. View loyalty dashboard
@@ -204,13 +204,13 @@ sequenceDiagram
             System->>System: Check slot availability
             alt Slot Available
                 System->>System: Reserve slot
-                System-->>Customer: âœ“ Booking confirmed
+                System-->>Customer:  Booking confirmed
             else Slot Full
-                System-->>Customer: âœ— No slots available
+                System-->>Customer:  No slots available
                 Note over Customer: Suggest off-peak or waitlist
             end
         else Standard/Non-member
-            System-->>Customer: âœ— Peak hours not available
+            System-->>Customer:  Peak hours not available
             Note over Customer: Upgrade to Member tier
         end
     end
@@ -238,7 +238,7 @@ sequenceDiagram
         
         Customer->>Bank: Scan & authorize payment
         Bank->>System: Send payment confirmation
-        System->>System: Update status â†’ "PAID"
+        System->>System: Update status -> "PAID"
         System-->>Notification: Send receipt
     else Internal Wallet Payment
         System->>System: Check wallet balance
@@ -247,7 +247,7 @@ sequenceDiagram
             System->>System: Update wallet balance
             System->>System: Record transaction
         else Insufficient Balance
-            System-->>Customer: âœ— Insufficient wallet balance
+            System-->>Customer: Insufficient wallet balance
             Customer->>System: Proceed with QR payment (fallback)
         end
     end
@@ -324,7 +324,7 @@ sequenceDiagram
     System->>System: Update invoice
     
     System->>Notification: Notify staff of service change
-    Notification-->>Staff: "Service updated: Basic â†’ Premium"
+    Notification-->>Staff: "Service updated: Basic -> Premium"
     
     Staff->>System: 7. Begin car wash
     System->>System: Record service start time
@@ -338,10 +338,10 @@ sequenceDiagram
 
 | Flow | Participants | Key Decision Points | Average Duration |
 |------|--------------|-------------------|------------------|
-| **Booking** | Customer â†’ System â†’ Payment | Slot availability, Payment method | 5-10 minutes |
-| **Walk-in** | Staff â†’ System â†’ Customer | Customer status, Payment method | 15-60 minutes |
-| **Loyalty** | System â†’ Customer | Tier threshold, Redemption | Ongoing |
-| **Peak Hour Allocation** | Admin â†’ System â†’ Customer | Membership tier, Time | Real-time |
-| **Payment & Refund** | System â†’ Bank/Wallet | Payment method, Refund policy | 24 hours max |
-| **Service Change** | Staff â†’ System â†’ Customer | New package, Price difference | 2-5 minutes |
+| **Booking** | Customer -> System -> Payment | Slot availability, Payment method | 5-10 minutes |
+| **Walk-in** | Staff -> System -> Customer | Customer status, Payment method | 15-60 minutes |
+| **Loyalty** | System -> Customer | Tier threshold, Redemption | Ongoing |
+| **Peak Hour Allocation** | Admin -> System -> Customer | Membership tier, Time | Real-time |
+| **Payment & Refund** | System -> Bank/Wallet | Payment method, Refund policy | 24 hours max |
+| **Service Change** | Staff -> System -> Customer | New package, Price difference | 2-5 minutes |
 
