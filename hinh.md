@@ -1,8 +1,9 @@
-```mermaid
-graph LR
+
+ ```mermaid
+graph TB
 
     %% =========================
-    %% EXTERNAL ACTORS
+    %% TOP ACTORS
     %% =========================
 
     Customer["Customer"]
@@ -18,10 +19,17 @@ graph LR
     end
 
     %% =========================
-    %% EXTERNAL SERVICES
+    %% BOTTOM EXTERNAL SERVICE
     %% =========================
 
     Bank["Banking App"]
+
+    %% =========================
+    %% LAYOUT CONTROL
+    %% =========================
+
+    Customer --- Staff
+    Staff --- Admin
 
     %% =========================
     %% CUSTOMER INTERACTIONS
